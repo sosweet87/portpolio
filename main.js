@@ -4,7 +4,7 @@ $(function(){
 
 
 $("#myWeb").fullpage({
-    anchors:['m01', 'm02', 'm03', 'm04', 'm05', 'm07','m08','m09'],
+    anchors:['m01', 'm02', 'm03', 'm04', 'm05', 'm07','m08','m09', 'm10'],
 	//navigation: true,
     afterLoad: function(origin, destination, direction){
         //console.log(destination.index);
@@ -99,7 +99,16 @@ $(".photo_slider").slick({
     dots:true,
     slidesToShow: 3,
     autoPlay:4000,
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow:1,
+            }
+        }
+    ]
 });
+
 $(".m07 i.xi-angle-left-thin").on("click",function(){
     $(".photo_slider").slick("slickPrev");
 })
